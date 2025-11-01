@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #d4d1ca;
+    font-family: "Manrope", sans-serif;
+}
+
+/* header */
+
+header .cont-img {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+header .cont-img img {
+    width: 180px;
+}
+
+.cont-linea {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-linea .linea {
+    width: 80%;
+    height: 1px;
+    background-color: #828282;
+}
+
+/* main productos*/
+
+.contenedor-productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 4rem;
+    margin: 0 auto;
+    margin-top: 57px;
+}
+
+.card {
+    position: relative;
+    width: 256px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.card img.segunda-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.card img:first-child {
+    z-index: 1; 
+}
+
+.card:hover img:first-child {
+    opacity: 0;
+}
+
+.card:hover img.segunda-img {
+    opacity: 1; 
+}
+
+.contenedor-productos .card .desc-prenda {
+    margin: 7px 0px 0px 1px;
+}
+
+.contenedor-productos .card .desc-prenda h3 {
+    font-size: 17px;
+    font-weight: 410;
+    font-style: normal;
+    margin-bottom: 4px;
+}
+
+.contenedor-productos .card .desc-prenda p {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 9px;
+    color: #464646;
+}
+
+.contenedor-productos .card .desc-prenda a {
+    position: relative;
+    color: #fff;
+    background-color: #B6AFA7;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 3px 10px;
+    transition: background-color 0.4s ease;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.contenedor-productos .card .desc-prenda a::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: 4px;
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0.001);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    will-change: transform;
+}
+
+.contenedor-productos .card .desc-prenda a:hover {
+    background-color: #8a8580;
+}
+
+.contenedor-productos .card .desc-prenda a:hover::after {
+    transform: scaleX(1);
+}
+
+.cont-frase {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.cont-frase h2 {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.cont-linea2 {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-linea2 .linea {
+    width: 80%;
+    height: 1px;
+    background-color: #828282;
+    margin: 4rem;
+}
+
+/* footer */
+footer .cont-img-footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer .cont-img-footer img {
+    width: 110px;
+}
+
+.cont-redes-footer {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    margin: 20px 0;
+}
+
+.cont-redes-footer a {
+    color: #4c4c4c;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.link-footer{
+    display: flex;
+    justify-content: center;
+    color: #4c4c4c;
+    font-size: 15px;
+    margin: 30px 0;
+    transition: all 0.3s ease;
+}
+
+.link-footer:hover {
+    color: #8a8580;
+}
+
+.marca{
+    text-align: center;
+    margin: 80px 0 18px 0;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.marca span a{
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+.marca span a:hover{
+    text-decoration: underline;
+}
