@@ -213,43 +213,43 @@ footer .cont-img-footer img {
     header .cont-img {
         padding: 2rem;
     }
-
+    
     header .cont-img img {
         width: 120px;
     }
-
+    
     .contenedor-productos{
         margin-top: 50px;
         gap: 2rem;
     }
-
+    
     .card{
         width: 140px;
     }
-
+    
     .contenedor-productos .card .desc-prenda h3 {
         font-size: 15px;
         margin-bottom: 3px;
     }
-
+    
     .contenedor-productos .card .desc-prenda p{
         font-size: 11px;
         margin-bottom: 7px;
     }
-
+    
     .contenedor-productos .card .desc-prenda a{
         font-size: 10px;
         padding: 2px 8px;
     }
-
+    
     .cont-frase{
         margin: 5.5rem 0 3rem 0;
     }
-
+    
     .cont-frase h2{
         font-size: 18px;
     }
-
+    
     .cont-linea2 .linea{
         margin: 0;
     }
@@ -261,9 +261,14 @@ footer .cont-img-footer img {
     .link-footer{
         margin: 14px 0;
     }
-
+    
     .marca{
         margin: 75px 0 15px 0;
         font-size: 10px;
+    }
+}
+@media(max-width: 360px) {
+    .card{
+        width: 122px;
     }
 }
