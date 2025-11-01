@@ -14,7 +14,6 @@ body {
 }
 
 /* header */
-
 header .cont-img {
     display: flex;
     justify-content: center;
@@ -36,21 +35,21 @@ header .cont-img img {
     background-color: #828282;
 }
 
-/* main productos*/
-
+/* main productos */
 .contenedor-productos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 290px); /* 4 columnas en pantallas grandes */
+    gap: 1.5rem;
+    justify-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 80%;
-    gap: 4rem;
     margin: 0 auto;
     margin-top: 57px;
 }
 
 .card {
     position: relative;
-    width: 256px;
+    width: 100%; /* ocupa toda la columna */
+    max-width: 256px;
     overflow: hidden;
 }
 
@@ -209,6 +208,12 @@ footer .cont-img-footer img {
 }
 
 /* responsive */
+@media(max-width: 900px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(3, 1fr); /* 3 productos por fila en tablets */
+    }
+}
+
 @media(max-width: 450px) {
     header .cont-img {
         padding: 2rem;
@@ -218,13 +223,15 @@ footer .cont-img-footer img {
         width: 120px;
     }
     
-    .contenedor-productos{
+    .contenedor-productos {
         margin-top: 50px;
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en móviles */
+        gap: 1rem;
+        justify-content: center;
     }
     
-    .card{
-        width: 140px;
+    .card {
+        max-width: 160px;
     }
     
     .contenedor-productos .card .desc-prenda h3 {
@@ -267,8 +274,9 @@ footer .cont-img-footer img {
         font-size: 10px;
     }
 }
+
 @media(max-width: 360px) {
     .card{
-        width: 122px;
+        max-width: 122px;
     }
 }
